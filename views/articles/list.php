@@ -13,12 +13,20 @@ $article = new Article($db);
 $stmt = $article->getList();
 $num = $stmt->rowCount();
 
+// page given in URL parameter, default page is one
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+ 
+// set number of records per page
+$records_per_page = 5;
+ 
+// calculate for the query LIMIT clause
+$from_record_num = ($records_per_page * $page) - $records_per_page;
+
 // set page header
 $page_title = "Elenco Articoli";
 include_once "../layout/layout_header.php";
 
 echo "<div class='right-button-margin'>";
-    echo "<a href='create.php' class='btn btn-primary pull-right'>Nuovo Articolo</a>";
 echo "</div>";
 
 // display the products if there are any
