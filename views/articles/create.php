@@ -35,32 +35,33 @@ if($_POST){
 
 <!-- Form creazione articolo-->
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
- 
-    <table class='table table-hover table-responsive table-bordered'>
- 
-        <tr>
-            <td>Titolo</td>
-            <td><input type='text' name='title' class='form-control' /></td>
-        </tr>
- 
-        <tr>
-            <td>Sottotitolo</td>
-            <td><input type='text' name='subtitle' class='form-control' /></td>
-        </tr>
- 
-        <tr>
-            <td>Testo</td>
-            <td><textarea name='description' class='form-control'></textarea></td>
-        </tr>
- 
-        <tr>
-            <td></td>
-            <td>
-                <button type="submit" class="btn btn-primary">Crea un nuovo articolo</button>
-            </td>
-        </tr>
- 
-    </table>
+    <div class="table-responsive">
+        <table class='table table-hover table-bordered'>
+
+            <tr>
+                <td>Titolo</td>
+                <td><input type='text' name='title' class='form-control' /></td>
+            </tr>
+
+            <tr>
+                <td>Sottotitolo</td>
+                <td><input type='text' name='subtitle' class='form-control' /></td>
+            </tr>
+
+            <tr>
+                <td>Testo</td>
+                <td><textarea name='description' class='form-control'></textarea></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" class="btn btn-primary">Crea un nuovo articolo</button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
 </form>
  
 <?php

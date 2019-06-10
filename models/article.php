@@ -50,4 +50,17 @@ class Article{
         }
  
     }
+    
+    function getList(){
+        $query = "SELECT
+                    id, title, subtitle, description
+                FROM
+                    " . $this->table_name . "
+                ORDER BY
+                    id ASC";
+
+        $stmt = $this->conn->prepare( $query );
+        $stmt->execute();
+        return $stmt;
+    }
 }
