@@ -26,8 +26,6 @@ $from_record_num = ($records_per_page * $page) - $records_per_page;
 $page_title = "Elenco Articoli";
 include_once "../layout/layout_header.php";
 
-echo "<div class='right-button-margin'>";
-echo "</div>";
 
 // display the products if there are any
 if($num>0){
